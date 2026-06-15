@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're in | Zero to Investor</title>
+<meta name="robots" content="noindex">
+
+<!-- ============================================================
+     EDIT BEFORE PUBLISHING
+     1. Discord invite link -> search: REPLACE_DISCORD_INVITE
+     2. Support email -> search: nick@zerotoinvestor.co.uk
+     Set this page as the "success URL" / redirect on your Stripe payment link.
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
+
+<style>
+  :root{--ink:#0E0E11;--paper:#ECEAE2;--paper-2:#B6B3A9;--paper-3:#807E76;
+        --brass:#C8A45C;--brass-bright:#E2C588;--line:rgba(214,199,167,.16)}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;background:var(--ink);color:var(--paper);
+       font-family:"Inter",system-ui,sans-serif;display:grid;place-items:center;
+       padding:32px;text-align:center;-webkit-font-smoothing:antialiased;position:relative;overflow:hidden}
+  body::after{content:"";position:absolute;left:50%;top:-15%;translate:-50% 0;width:min(700px,120vw);height:520px;
+        background:radial-gradient(50% 50% at 50% 50%,rgba(200,164,92,.16),transparent 70%);pointer-events:none}
+  .card{position:relative;z-index:1;max-width:540px}
+  .mark{width:56px;height:56px;border-radius:14px;margin:0 auto 28px;display:grid;place-items:center;
+        border:1px solid var(--brass);color:var(--brass);font-family:"Switzer","Helvetica Neue",Arial,sans-serif;font-weight:600;font-size:28px;
+        background:linear-gradient(160deg,rgba(200,164,92,.16),rgba(200,164,92,.02))}
+  .eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin:0 0 18px}
+  h1{font-family:"Switzer","Helvetica Neue",Arial,sans-serif;font-weight:500;font-size:clamp(34px,7vw,52px);line-height:1.08;margin:0 0 18px}
+  p{color:var(--paper-2);font-size:18px;line-height:1.65;margin:0 auto 32px;max-width:440px}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:17px;color:#15130D;
+       background:var(--brass);padding:17px 34px;border-radius:11px;transition:transform .18s ease,background .2s ease;text-decoration:none;
+       box-shadow:0 12px 30px -12px rgba(200,164,92,.5)}
+  .btn:hover{background:var(--brass-bright);transform:translateY(-2px)}
+  .help{margin-top:30px;font-size:14.5px;color:var(--paper-3)}
+  .help a{color:var(--brass)}
+  .steps{list-style:none;padding:0;margin:0 auto 32px;max-width:420px;text-align:left;display:grid;gap:12px}
+  .steps li{position:relative;padding-left:30px;color:var(--paper-2);font-size:15.5px}
+  .steps li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:8px;
+       border-left:2px solid var(--brass);border-bottom:2px solid var(--brass);transform:rotate(-45deg)}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="mark">£</div>
+    <p class="eyebrow">Payment received</p>
+    <h1>You're in. Welcome to Zero to Investor.</h1>
+    <p>Thanks for joining. Your next step is to hop into the private Discord community.</p>
+    <ul class="steps">
+      <li>Click the button below to open the Discord invite.</li>
+      <li>If you don't have Discord yet, it's free to create an account.</li>
+      <li>Say hello in the welcome channel and get stuck in.</li>
+    </ul>
+    <!-- REPLACE_DISCORD_INVITE -->
+    <a class="btn" href="#REPLACE_DISCORD_INVITE">Join the Discord</a>
+    <p class="help">Having trouble getting in? Email me at <a href="mailto:nick@zerotoinvestor.co.uk">nick@zerotoinvestor.co.uk</a> and I'll sort you out.</p>
+  </div>
+</body>
+</html>
