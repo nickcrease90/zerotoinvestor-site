@@ -10,12 +10,14 @@
      POST-PAYMENT FLOW
      The Discord invite is NOT on this page. A public invite link anyone
      with the page URL could use is a security risk, so it's emailed to
-     the buyer instead:
+     the buyer, and the Discord server uses apply-to-join so access is
+     tied to payment:
        1. Stripe Payment Link -> "After payment" -> redirect to this page.
-       2. Zapier: Stripe "Checkout Session Completed" trigger -> send an
-          email containing the Discord invite to the customer's email.
-          Stripe collects that email on the checkout page, so there is
-          no email field to add anywhere.
+       2. Zapier: Stripe "Checkout Session Completed" trigger -> email the
+          Discord invite to the customer (Stripe collects that email at
+          checkout, in customer_details.email, so no field to add here).
+       3. Discord "Apply to join": the buyer enters the email they paid
+          with, and you approve them against Stripe before they get in.
      Support email below: nick@zerotoinvestor.co.uk
      ============================================================ -->
 
@@ -53,12 +55,12 @@
     <div class="mark">£</div>
     <p class="eyebrow">Payment received</p>
     <h1>You're in. Welcome to Zero to Investor.</h1>
-    <p>Thanks for joining. Your invite to the private Discord is on its way to the email address you paid with. Open the email and follow the link to get set up.</p>
+    <p>Thanks for joining. Your invite to the private Discord is on its way to the email address you paid with. Have a look for it and follow the steps below.</p>
     <ul class="steps">
-      <li>Check the inbox for the email address you used at checkout.</li>
-      <li>Open the email from me and click the link to join the private Discord.</li>
-      <li>If you don't have Discord yet, it's free to create an account.</li>
-      <li>Say hello in the welcome channel and get stuck in.</li>
+      <li>Check the inbox for the email address you paid with. If you don't have Discord yet, it's free to set up.</li>
+      <li>Open the email from me and click the invite link.</li>
+      <li>When Discord asks, give the same email you paid with so I can match you.</li>
+      <li>I'll approve you, then you can say hello in the welcome channel.</li>
     </ul>
     <p class="help">If it's not there within a few minutes, check your spam or promotions folder, and if it still hasn't arrived email me at <a href="mailto:nick@zerotoinvestor.co.uk">nick@zerotoinvestor.co.uk</a> and I'll sort you out.</p>
   </div>
