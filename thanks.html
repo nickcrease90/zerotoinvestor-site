@@ -13,7 +13,7 @@
      the buyer, and the Discord server uses apply-to-join so access is
      tied to payment:
        1. Stripe Payment Link -> "After payment" -> redirect to this page.
-       2. Zapier: Stripe "Checkout Session Completed" trigger -> email the
+       2. Make: a Stripe "Checkout Session Completed" webhook -> email the
           Discord invite to the customer (Stripe collects that email at
           checkout, in customer_details.email, so no field to add here).
        3. Discord "Apply to join": the buyer enters the email they paid
@@ -60,7 +60,7 @@
       <li>Check your inbox.</li>
       <li>Open the email from me and click the invite link.</li>
       <li>When Discord asks, give the same email you paid with so I can match you.</li>
-      <li>I'll approve you, then you can say hello in the welcome channel.</li>
+      <li>I'll approve you, then come in and say hello.</li>
     </ul>
     <p class="help">If it's not there within a few minutes, check your spam or promotions folder, and if it still hasn't arrived email me at <a href="mailto:nick@zerotoinvestor.co.uk">nick@zerotoinvestor.co.uk</a> and I'll sort you out.</p>
   </div>
