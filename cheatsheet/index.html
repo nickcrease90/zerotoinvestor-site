@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free ETF Cheat Sheet | Zero to Investor</title>
+<meta name="description" content="A simple one-page guide to widely used ETFs across major regions and sectors. Free when you subscribe.">
+<meta property="og:title" content="Free ETF Cheat Sheet | Zero to Investor">
+<meta property="og:description" content="Simplify your investing while reducing your costs. A simple one-page guide to widely used ETFs.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#191919;
+    --ink:#111111;
+    --white:#ffffff;
+    --yellow:#FFD200;
+    --grey:#9a9a9a;
+    --sheet:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:var(--charcoal);
+    color:var(--white);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;flex-direction:column;align-items:center;
+    padding:40px 20px 32px;
+    min-height:100vh;
+  }
+  .wordmark{
+    font-family:"Bebas Neue",sans-serif;
+    text-align:center;line-height:.9;user-select:none;
+  }
+  .wordmark .l1{display:block;font-size:28px;letter-spacing:.06em;color:var(--white)}
+  .wordmark .l2{display:block;font-size:11px;letter-spacing:.9em;margin:2px 0 2px .9em;color:var(--white)}
+  .wordmark .l3{display:block;font-size:28px;letter-spacing:.06em;color:var(--yellow)}
+  main{
+    width:100%;max-width:560px;
+    display:flex;flex-direction:column;align-items:center;
+    flex:1;
+  }
+  h1{
+    font-family:"Bebas Neue",sans-serif;
+    font-size:clamp(52px,13vw,84px);
+    line-height:.95;text-align:center;
+    letter-spacing:.01em;
+    margin-top:36px;
+  }
+  h1 .free{color:var(--yellow)}
+  .sub{
+    margin-top:14px;text-align:center;
+    font-size:17px;color:var(--white);
+    max-width:34ch;
+  }
+  /* The sheet: a literal one-page panel holding the signup */
+  .sheet{
+    position:relative;
+    background:var(--sheet);
+    color:var(--ink);
+    width:100%;
+    margin-top:32px;
+    padding:26px 24px 22px;
+    border-radius:6px;
+    box-shadow:0 14px 40px rgba(0,0,0,.45);
+  }
+  /* folded corner */
+  .sheet::after{
+    content:"";position:absolute;top:0;right:0;
+    border-style:solid;border-width:0 26px 26px 0;
+    border-color:transparent var(--charcoal) var(--yellow) transparent;
+    border-top-right-radius:6px;
+  }
+  .sheet h2{
+    font-family:"Bebas Neue",sans-serif;
+    font-size:22px;letter-spacing:.04em;
+    border-bottom:3px solid var(--yellow);
+    display:inline-block;padding-bottom:4px;margin-bottom:14px;
+  }
+  .sheet p{font-size:15.5px;line-height:1.5;color:#333}
+  .sheet p + p{margin-top:8px}
+  .sheet .small{font-size:13px;color:#777;margin-top:8px}
+  .embed-wrap{margin-top:18px}
+  .embed-wrap iframe{
+    width:100%;height:320px;border:1px solid #e8e8e8;border-radius:4px;background:var(--white);
+  }
+  .inbox-note{
+    margin-top:12px;font-size:13.5px;line-height:1.5;color:#555;
+  }
+  .inbox-note strong{color:var(--ink)}
+  footer{
+    margin-top:36px;text-align:center;
+    font-size:12.5px;color:var(--grey);line-height:1.6;
+  }
+  a{color:var(--yellow)}
+  :focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+  @media (prefers-reduced-motion:no-preference){
+    main{animation:rise .5s ease-out both}
+    @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+  <div class="wordmark" aria-label="Zero to Investor">
+    <span class="l1">ZERO</span>
+    <span class="l2">TO</span>
+    <span class="l3">INVESTOR</span>
+  </div>
+
+  <main>
+    <h1><span class="free">FREE</span> ETF CHEAT&nbsp;SHEET</h1>
+    <p class="sub">Simplify your investing while reducing your costs.</p>
+
+    <section class="sheet" aria-label="Get the cheat sheet">
+      <h2>What you get</h2>
+      <p>A simple one-page guide to widely used ETFs across major regions and sectors, making them easy to compare.</p>
+      <p class="small">You'll also be subscribed to my weekly investing emails. Unsubscribe anytime.</p>
+
+      <div class="embed-wrap">
+        <iframe src="https://zerotoinvestor.substack.com/embed" title="Subscribe to Zero to Investor" scrolling="no"></iframe>
+      </div>
+
+      <p class="inbox-note"><strong>After you subscribe:</strong> the cheat sheet lands in your welcome email within a couple of minutes. Can't see it? Check your spam or promotions folder.</p>
+    </section>
+  </main>
+
+  <footer>
+    Zero to Investor<br>
+    Nothing here is financial advice. Always do your own research.
+  </footer>
+</body>
+</html>
