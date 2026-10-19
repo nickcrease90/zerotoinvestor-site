@@ -2,11 +2,12 @@
 
 ## What this is
 The zerotoinvestor.co.uk site for Nick, a UK personal-finance creator. Pages:
-- `/` (`index.html`): a simple holding page (wordmark, a line saying something
-  is in the works, cheat sheet and YouTube links) until the community waitlist
-  goes live.
+- `/waitlist/` (`waitlist/index.html`): the waitlist for the Zero to Investor
+  community, which will run on Skool. It collects first name and email to prove
+  demand before anything is built. Nothing is sold on the site.
 - `/cheatsheet/`: the free ETF cheat sheet signup (Substack embed). Leave alone
   unless asked.
+- `/` (`index.html`): redirects to `/waitlist/`.
 
 The old Discord sales page (£19.99 lifetime) and its `thanks.html` were taken
 offline in Oct 2026. They are kept, unpublished, on the `discord-page-archive`
@@ -18,7 +19,24 @@ asks; anything on `main` is public.
   build step.
 - Brand for current pages (matches the Substack and the cheat sheet): charcoal
   #191919 background, yellow #FFD200 accent, white text, Bebas Neue (Google
-  Fonts) for the wordmark and headlines, system sans for body.
+  Fonts) for the wordmark and headlines, system sans for body. The stacked
+  ZERO / TO / INVESTOR wordmark sits at the top of each page.
+- Nick's photo on the waitlist page is a small embedded base64 JPEG.
+- Waitlist form: posts first name, email and the page path to a Google Apps
+  Script web app (`WAITLIST_ENDPOINT` in the page script), which writes a row to
+  a Google Sheet in Nick's Workspace and sends the confirmation email from his
+  address. While `WAITLIST_ENDPOINT` is empty the form refuses to submit, so no
+  signups are lost. Never point it anywhere else.
+
+## Promises the waitlist page makes (keep them true)
+- £5 a month for waitlist members who join in the early access window, kept
+  for as long as they stay a member; £10 a month when it opens to everyone.
+  Skool bills in USD, which the page says.
+- Launch contents: a short starter course, Nick answering questions, live
+  Q&As, other members. Don't add launch promises Nick hasn't confirmed.
+- Emails are only used for the community opening and not shared.
+- No qualifications or CV-style credential lists on the page. The credibility
+  line is one plain sentence about his time in the fund industry.
 
 ## Deploy
 - The repo auto-deploys to Hostinger. A merge to `main` triggers a fresh deploy
@@ -46,12 +64,12 @@ generic AI writing.
   give regulated financial advice. No page may promise advice,
   recommendations, or tell people what to buy. He helps people think through
   their own decisions and they decide. Preserve this in every edit. Pages with
-  investing content keep a not-financial-advice line in the footer; the
-  holding page has none, by Nick's choice.
+  investing content keep a not-financial-advice line in the footer.
 
 ## Open items
-- The community waitlist page is built on the `waitlist-page` branch and waits
-  on its Google Sheet connection before it's merged.
+- Set up the Google Sheet and Apps Script, then paste its web app URL into
+  `WAITLIST_ENDPOINT` before the waitlist goes live.
+- Nick is switching off the old £19.99 Stripe payment link himself.
 
 ## Working with Nick
 - One scoped change at a time, and show what changed.

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Community Waitlist | Zero to Investor</title>
+<meta name="description" content="Join the waitlist for the Zero to Investor community and get first access at £5 a month.">
+<meta property="og:title" content="Community Waitlist | Zero to Investor">
+<meta property="og:description" content="A place for UK investors to ask questions and talk to people doing the same thing. Join the waitlist to get first access.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://zerotoinvestor.co.uk/waitlist/">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-zti-32.png">
+<link rel="apple-touch-icon" href="/favicon-zti-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#191919;
+    --charcoal-2:#222222;
+    --ink:#111111;
+    --white:#ffffff;
+    --yellow:#FFD200;
+    --grey:#9a9a9a;
+    --grey-2:#c9c9c9;
+    --sheet:#ffffff;
+    --line:#e6e6e6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{min-height:100%}
+  body{
+    background:var(--charcoal);
+    color:var(--white);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;flex-direction:column;align-items:center;
+    padding:26px 20px 22px;
+    min-height:100vh;
+  }
+  .wordmark{
+    font-family:"Bebas Neue",sans-serif;
+    text-align:center;line-height:.9;user-select:none;
+  }
+  .wordmark .l1{display:block;font-size:24px;letter-spacing:.06em;color:var(--white)}
+  .wordmark .l2{display:block;font-size:10px;letter-spacing:.9em;margin:.5px 0 2.5px .9em;color:var(--white)}
+  .wordmark .l3{display:block;font-size:24px;letter-spacing:.06em;color:var(--yellow)}
+
+  main{
+    width:100%;max-width:1040px;
+    flex:1;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:28px;
+    margin-top:28px;
+    align-content:center;
+  }
+  @media (min-width:900px){
+    main{grid-template-columns:1.2fr 1fr;column-gap:56px;row-gap:0;align-items:center;margin-top:6px}
+    .intro{grid-column:1;grid-row:1}
+    .sheet{grid-column:2;grid-row:1 / span 2}
+    .about{grid-column:1;grid-row:2;align-self:start}
+  }
+
+  /* ---------- left column ---------- */
+  .label{
+    display:inline-block;
+    font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink);background:var(--yellow);
+    padding:5px 10px;border-radius:3px;
+  }
+  h1{
+    font-family:"Bebas Neue",sans-serif;
+    font-weight:400;
+    font-size:clamp(46px,6.2vw,64px);
+    line-height:.95;letter-spacing:.01em;
+    margin-top:16px;
+  }
+  h1 .y{color:var(--yellow)}
+  .lede{margin-top:16px;font-size:17px;line-height:1.55;max-width:46ch}
+  .sub{
+    margin-top:20px;
+    font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);
+  }
+  ul.launch{list-style:none;margin-top:10px;display:grid;gap:7px}
+  ul.launch li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.45}
+  ul.launch li::before{
+    content:"";flex:0 0 auto;margin-top:7px;
+    width:8px;height:8px;background:var(--yellow);transform:rotate(45deg);
+  }
+  .intro{padding-bottom:22px}
+  .grow{margin-top:14px;font-size:14.5px;line-height:1.5;color:var(--grey-2);max-width:46ch}
+
+  .about{
+    display:flex;gap:14px;align-items:center;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.1);
+    max-width:50ch;
+  }
+  .about img{
+    width:56px;height:56px;border-radius:50%;object-fit:cover;flex:0 0 auto;
+    border:2px solid var(--yellow);
+  }
+  .about p{font-size:14.5px;line-height:1.5;color:var(--grey-2)}
+
+  /* ---------- the sheet (price + form) ---------- */
+  .sheet{
+    position:relative;
+    background:var(--sheet);color:var(--ink);
+    padding:28px 26px 24px;
+    border-radius:6px 0 6px 6px;
+    box-shadow:0 14px 40px rgba(0,0,0,.45);
+  }
+  .sheet::after{
+    content:"";position:absolute;top:0;right:0;
+    border-style:solid;border-width:0 26px 26px 0;
+    border-color:transparent var(--charcoal) var(--yellow) transparent;
+  }
+  .prices{display:grid;gap:10px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+  .price{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+  .price .k{font-size:14px;color:#555}
+  .price .v{font-family:"Bebas Neue",sans-serif;font-size:30px;letter-spacing:.02em;line-height:1}
+  .price .v small{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:13px;color:#555;margin-left:4px;letter-spacing:0}
+  .price--main .k{color:var(--ink);font-weight:700}
+  .price--main .v{font-size:40px}
+  .price--later .v{color:#777}
+  .lock{margin-top:14px;font-size:14.5px;line-height:1.5}
+  .fx{margin-top:6px;font-size:12.5px;line-height:1.5;color:#666}
+
+  form{margin-top:18px;display:grid;gap:10px}
+  label.f{display:grid;gap:5px;font-size:13px;font-weight:600;color:#333}
+  input[type=text],input[type=email]{
+    font:inherit;font-size:16px;
+    width:100%;padding:12px 14px;
+    border:1px solid #cfcfcf;border-radius:6px;background:#fff;color:var(--ink);
+  }
+  input:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(255,210,0,.55)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  button{
+    margin-top:4px;
+    font:inherit;font-size:16px;font-weight:700;letter-spacing:.01em;
+    background:var(--yellow);color:var(--ink);
+    border:none;border-radius:6px;padding:14px 18px;cursor:pointer;
+    transition:transform .15s ease, filter .15s ease;
+  }
+  button:hover{filter:brightness(1.05);transform:translateY(-1px)}
+  button:disabled{opacity:.6;cursor:default;transform:none}
+  .note{margin-top:12px;font-size:13px;line-height:1.5;color:#555;text-align:center}
+  .note .ln{display:inline-block}
+  .err{font-size:13.5px;color:#b00020;text-align:center;min-height:0}
+
+  .done{display:none;text-align:left;padding:6px 0 2px}
+  .done h2{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:40px;letter-spacing:.01em;line-height:1}
+  .done p{margin-top:12px;font-size:15.5px;line-height:1.55}
+  .sheet.is-done form,.sheet.is-done .after-form,.sheet.is-done .prices,.sheet.is-done .lock,.sheet.is-done .fx{display:none}
+  .sheet.is-done .done{display:block}
+
+  footer{
+    margin-top:30px;text-align:center;
+    font-size:12.5px;color:var(--grey);line-height:1.6;max-width:70ch;
+  }
+  :focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+  @media (prefers-reduced-motion:no-preference){
+    main{animation:rise .5s ease-out both}
+    @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+  <div class="wordmark" aria-label="Zero to Investor">
+    <span class="l1">ZERO</span>
+    <span class="l2">TO</span>
+    <span class="l3">INVESTOR</span>
+  </div>
+
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <span class="label">Waitlist open</span>
+      <h1 id="title">The Zero to Investor<br><span class="y">community</span></h1>
+      <p class="lede">A place for UK investors to ask questions and talk to people doing the same thing. Join the waitlist to get first access.</p>
+
+      <p class="sub">In it at launch</p>
+      <ul class="launch">
+        <li>A short starter course you can work through on day one</li>
+        <li>Ask me your investing questions</li>
+        <li>Live Q&amp;As</li>
+        <li>Other UK investors at the same stage as you</li>
+      </ul>
+      <p class="grow">The plan is to keep adding to it over time, with more resources and other people who know their stuff.</p>
+
+    </section>
+
+    <section class="sheet" id="sheet" aria-label="Join the waitlist">
+      <div class="prices">
+        <div class="price price--main"><span class="k">Waitlist price</span><span class="v">£5<small>a month</small></span></div>
+        <div class="price price--later"><span class="k">When it opens to everyone</span><span class="v">£10<small>a month</small></span></div>
+      </div>
+      <p class="lock">Join from the waitlist during the early access window and you keep £5 a month for as long as you stay a member.</p>
+      <p class="fx">Payments are taken in US dollars, so the exact amount moves slightly with the exchange rate.</p>
+
+      <form id="wl" novalidate>
+        <label class="f">First name
+          <input type="text" name="first_name" autocomplete="given-name" required maxlength="60">
+        </label>
+        <label class="f">Email
+          <input type="email" name="email" autocomplete="email" required maxlength="120">
+        </label>
+        <div class="hp" aria-hidden="true">
+          <label>Leave this empty <input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <button type="submit" id="btn">Join the waitlist</button>
+        <p class="err" id="err" role="alert"></p>
+      </form>
+      <p class="note after-form"><span class="ln">No payment and no obligation to join.</span> <span class="ln">You're just registering your interest.</span></p>
+
+      <div class="done" id="done" aria-live="polite">
+        <h2>You're on the list</h2>
+        <p>I'll email you when the community opens, before it opens to everyone, so you can join at £5 a month. A confirmation email is on its way now. If it's not in your inbox, check your spam folder.</p>
+      </div>
+    </section>
+
+    <div class="about">
+        <img src="data:image/jpeg;base64,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" alt="Nick Crease">
+        <p>I'm Nick. I spent a decade working in the fund industry at places like M&amp;G and Invesco before going full-time on YouTube, where over 9,000 people now subscribe.</p>
+      </div>
+  </main>
+
+  <footer>
+    I'll only use your email to tell you about the community opening, and it won't be shared.<br>
+    Everything in the community is education, not personal financial advice.
+  </footer>
+
+<script>
+  // Google Apps Script web app URL goes here once the Sheet is set up.
+  // While it's empty, the form refuses to submit so no signups are lost.
+  var WAITLIST_ENDPOINT = "";
+
+  (function(){
+    var form = document.getElementById('wl');
+    var btn = document.getElementById('btn');
+    var err = document.getElementById('err');
+    var sheet = document.getElementById('sheet');
+    var emailOk = function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); };
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      err.textContent = '';
+      var name = form.first_name.value.trim();
+      var email = form.email.value.trim();
+      if (form.company.value) { sheet.classList.add('is-done'); return; }
+      if (!name) { err.textContent = 'Please add your first name.'; form.first_name.focus(); return; }
+      if (!emailOk(email)) { err.textContent = 'Please check your email address.'; form.email.focus(); return; }
+      if (!WAITLIST_ENDPOINT) { err.textContent = "Signups aren't switched on yet. Please try again soon."; return; }
+
+      btn.disabled = true; btn.textContent = 'Joining...';
+      var body = new URLSearchParams({ first_name: name, email: email, page: location.pathname + location.search });
+      fetch(WAITLIST_ENDPOINT, { method: 'POST', mode: 'no-cors', body: body })
+        .then(function(){ sheet.classList.add('is-done'); })
+        .catch(function(){
+          btn.disabled = false; btn.textContent = 'Join the waitlist';
+          err.textContent = "That didn't go through. Please check your connection and try again.";
+        });
+    });
+  })();
+</script>
+</body>
+</html>
