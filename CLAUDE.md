@@ -1,26 +1,23 @@
 # Zero to Investor - Landing Page
 
 ## What this is
-A single-page sales/landing page for Zero to Investor, a paid Discord community
-run by Nick, a UK personal-finance creator (dividend and retirement focus). It
-sells lifetime access to the community for a one-off £19.99 via Stripe. The
-page's only job is to convert visitors into paying members.
+The zerotoinvestor.co.uk site for Nick, a UK personal-finance creator. Pages:
+- `/` (`index.html`): a simple holding page (wordmark, cheat sheet and YouTube
+  links) until the community waitlist goes live.
+- `/cheatsheet/`: the free ETF cheat sheet signup (Substack embed). Leave alone
+  unless asked.
+
+The old Discord sales page (£19.99 lifetime) and its `thanks.html` were taken
+offline in Oct 2026. They are kept, unpublished, on the `discord-page-archive`
+branch so they can be reused. Don't bring them back onto `main` unless Nick
+asks; anything on `main` is public.
 
 ## How it's built
-- One self-contained file: `index.html`. All CSS and JS are inline, and Nick's
-  photo is embedded as a base64 data URI, so the page renders with no other
-  assets.
-- `thanks.html` is the page shown after payment.
-- Fonts: Switzer for headings (loaded from Fontshare), Inter for body (loaded
-  from Google Fonts). Both are free for commercial use. Do not reintroduce
-  Fraunces or any serif.
-- Dark "quiet wealth" theme. Use the existing CSS variables, do not hardcode new
-  colours:
-  - Backgrounds: --ink #0E0E11, --ink-2 #121217, --surface #17171D, --surface-2 #1D1D25
-  - Text: --paper #ECEAE2, --paper-2 #B6B3A9, --paper-3 #8C8A81
-  - Accent: --brass #C8A45C, --brass-bright #E2C588, --brass-deep #A8863F
-- Stripe payment link, used in every join button:
-  https://buy.stripe.com/9B6eVef66aAvdCzcp30Fi00
+- Plain static HTML, one self-contained file per page, CSS and JS inline. No
+  build step.
+- Brand for current pages (matches the Substack and the cheat sheet): charcoal
+  #191919 background, yellow #FFD200 accent, white text, Bebas Neue (Google
+  Fonts) for the wordmark and headlines, system sans for body.
 
 ## Deploy
 - The repo auto-deploys to Hostinger. A merge to `main` triggers a fresh deploy
@@ -44,26 +41,15 @@ generic AI writing.
 - Frame things as frameworks and criteria, not warnings or problems.
 
 ## Positioning and copy guardrails
-- The page niches to a PROBLEM, not a person: helping people make portfolio
-  decisions and giving them somewhere to get a second opinion. Keep that framing.
-- Differentiators, in rough priority: direct access to Nick, a private community
-  of like-minded UK investors, lifetime one-off access with all future resources
-  included, an organised library of education videos, budgeting spreadsheets.
 - ADVICE BOUNDARY, do not cross: Nick is not a financial adviser and does not
-  give regulated financial advice. The page must never promise advice,
+  give regulated financial advice. No page may promise advice,
   recommendations, or tell people what to buy. He helps people think through
-  their own decisions and they decide. Preserve this in every edit. The footer
-  disclaimer (not financial advice, not a financial adviser) stays.
+  their own decisions and they decide. Preserve this in every edit. The
+  not-financial-advice line in each footer stays.
 
-## Open items (not yet resolved)
-- Domain: the page uses zerotoinvestor.co.uk in the canonical tag and footer
-  email. An earlier brief said zeroinvestor.co.uk (no "to"). Confirm which Nick
-  actually owns at IONOS before launch and make them match.
-- thanks.html: needs a decision on how the Discord invite reaches a buyer after
-  payment (a public invite link on the page is a security risk). Likely route is
-  Stripe to an email via Zapier, with the thanks page saying "check your email".
-- Stripe: the product still reads "Investing Hub" and needs renaming to Zero to
-  Investor.
+## Open items
+- The community waitlist page is built on the `waitlist-page` branch and waits
+  on its Google Sheet connection before it's merged.
 
 ## Working with Nick
 - One scoped change at a time, and show what changed.
