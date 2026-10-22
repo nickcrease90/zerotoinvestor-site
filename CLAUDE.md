@@ -2,8 +2,9 @@
 
 ## What this is
 The zerotoinvestor.co.uk site for Nick, a UK personal-finance creator. Pages:
-- `/` (`index.html`): a simple holding page (wordmark, cheat sheet and YouTube
-  links) until the community waitlist goes live.
+- `/` (`index.html`): a simple holding page (wordmark, a line saying something
+  is in the works, cheat sheet and YouTube links) until the community waitlist
+  goes live.
 - `/cheatsheet/`: the free ETF cheat sheet signup (Substack embed). Leave alone
   unless asked.
 
@@ -44,8 +45,9 @@ generic AI writing.
 - ADVICE BOUNDARY, do not cross: Nick is not a financial adviser and does not
   give regulated financial advice. No page may promise advice,
   recommendations, or tell people what to buy. He helps people think through
-  their own decisions and they decide. Preserve this in every edit. The
-  not-financial-advice line in each footer stays.
+  their own decisions and they decide. Preserve this in every edit. Pages with
+  investing content keep a not-financial-advice line in the footer; the
+  holding page has none, by Nick's choice.
 
 ## Open items
 - The community waitlist page is built on the `waitlist-page` branch and waits
