@@ -7,6 +7,22 @@ The zerotoinvestor.co.uk site for Nick, a UK personal-finance creator. Pages:
   goes live.
 - `/cheatsheet/`: the free ETF cheat sheet signup (Substack embed). Leave alone
   unless asked.
+- `/links/`: Nick's link-in-bio page, replacing his Stan Store page
+  (stan.store/nickcrease). Built to look the same as Stan: photo, name, social
+  icons, then link cards (two columns on wide screens). Uses Stan's colours and
+  Inter rather than the charcoal/yellow brand, by Nick's choice.
+  - All content lives in the `PAGE` object at the top of the script in
+    `links/index.html`: name, photo, Umami ID, socials, and the `links` array.
+    To add a link, copy a block in `links` and edit it; `show: false` hides
+    one. Card text is Nick's own wording (Lightyear's line is the one they've
+    approved), so don't reword it or add labels he hasn't asked for.
+  - Images go in `links/img/` (square, 216px or bigger). A card with
+    `image: ""` shows the first letter of its title.
+  - Social icons available: instagram, tiktok, youtube, linkedin, substack.
+    Adding another platform means adding its SVG to `ICONS`.
+  - Click stats: Umami Cloud (cookieless, so no cookie banner). Each card is
+    tracked under its `id`, each icon as `social-<icon>`. Tracking only loads
+    once `umamiWebsiteId` is filled in, and only counts on zerotoinvestor.co.uk.
 
 The old Discord sales page (£19.99 lifetime) and its `thanks.html` were taken
 offline in Oct 2026. They are kept, unpublished, on the `discord-page-archive`
@@ -52,6 +68,10 @@ generic AI writing.
 ## Open items
 - The community waitlist page is built on the `waitlist-page` branch and waits
   on its Google Sheet connection before it's merged.
+- The links page is built on the `links-page` branch. Before merging it needs
+  Nick's photo (`links/img/` and `PAGE.photo`), the Lightyear and Monzo logos,
+  and the Umami Website ID. Swap the Stan URL in his bios and descriptions for
+  zerotoinvestor.co.uk/links before cancelling Stan.
 
 ## Working with Nick
 - One scoped change at a time, and show what changed.
