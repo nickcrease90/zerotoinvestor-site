@@ -8,9 +8,9 @@ The zerotoinvestor.co.uk site for Nick, a UK personal-finance creator. Pages:
 - `/cheatsheet/`: the free ETF cheat sheet signup (Substack embed). Leave alone
   unless asked.
 - `/links/`: Nick's link-in-bio page, replacing his Stan Store page
-  (stan.store/nickcrease). Built to look the same as Stan: photo, name, social
-  icons, then link cards (two columns on wide screens). Uses Stan's colours and
-  Inter rather than the charcoal/yellow brand, by Nick's choice.
+  (stan.store/nickcrease). Photo, name and social icons at the top, then link
+  cards: one column on phones, two wide columns from 900px. Uses Stan's
+  colours and Inter rather than the charcoal/yellow brand, by Nick's choice.
   - All content lives in the `PAGE` object at the top of the script in
     `links/index.html`: name, photo, Umami ID, socials, and the `links` array.
     To add a link, copy a block in `links` and edit it; `show: false` hides

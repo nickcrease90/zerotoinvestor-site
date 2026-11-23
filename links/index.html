@@ -95,29 +95,23 @@
   .card-btn:hover{filter:brightness(.93)}
   .card-small{margin-top:10px;font-size:12.5px;line-height:1.45;color:var(--muted);text-align:center;text-wrap:balance}
 
-  /* ---------- Desktop layout: profile left, cards right ---------- */
+  /* ---------- Desktop layout: profile on top, two wide columns of cards ---------- */
   @media (min-width:900px){
-    .page{max-width:1440px;display:grid;grid-template-columns:36% 1fr;padding-bottom:0}
-    .profile{
-      position:sticky;top:0;height:100vh;padding-top:40px;
-      display:flex;flex-direction:column;align-items:center;justify-content:center;
-    }
-    .hero{width:180px;height:180px;aspect-ratio:auto;border-radius:8px}
+    .page{max-width:1120px;padding:0 40px 72px}
+    .profile{padding-top:56px;display:flex;flex-direction:column;align-items:center}
+    .hero{width:168px;height:168px;aspect-ratio:auto;border-radius:10px}
     .hero::after{display:none}
     .hero .initials{font-size:44px;margin-top:0}
-    .name{margin-top:22px;padding:0;font-size:25px;line-height:30px}
-    .socials{gap:8px;margin-top:32px}
+    .name{margin-top:20px;padding:0;font-size:28px;line-height:34px}
+    .socials{gap:8px;margin-top:20px}
     .socials a{width:32px;height:32px;border:1px solid rgba(255,255,255,.3)}
     .socials svg{width:21px;height:21px}
-    .links{
-      max-width:532px;align-content:start;
-      padding:max(56px,12vh) 72px 64px 51px;
-    }
+    .links{grid-template-columns:1fr 1fr;column-gap:24px;row-gap:24px;padding:44px 0 0}
+    .card{padding:26px 28px 22px}
   }
-  /* Wide screens: two columns of cards, like Stan */
-  @media (min-width:1200px){
-    .links{max-width:none;grid-template-columns:1fr 1fr;column-gap:24px;row-gap:24px}
-    /* room for two lines of small print so buttons line up across a row */
+  /* Narrower desktops: the longest small print wraps to two lines, so
+     reserve two lines on every card to keep buttons level across a row */
+  @media (min-width:900px) and (max-width:1119px){
     .card-small{min-height:2.9em}
   }
 </style>
