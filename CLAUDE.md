@@ -68,10 +68,9 @@ generic AI writing.
 ## Open items
 - The community waitlist page is built on the `waitlist-page` branch and waits
   on its Google Sheet connection before it's merged.
-- The links page is built on the `links-page` branch. Before merging it needs
-  Nick's photo (`links/img/` and `PAGE.photo`), the Lightyear and Monzo logos,
-  and the Umami Website ID. Swap the Stan URL in his bios and descriptions for
-  zerotoinvestor.co.uk/links before cancelling Stan.
+- The links page is built on the `links-page` branch with photo, card images
+  and Umami ID in place, ready to merge on Nick's go. Swap the Stan URL in his
+  bios and descriptions for zerotoinvestor.co.uk/links before cancelling Stan.
 
 ## Working with Nick
 - One scoped change at a time, and show what changed.
