@@ -14,8 +14,12 @@ The zerotoinvestor.co.uk site for Nick, a UK personal-finance creator. Pages:
   - All content lives in the `PAGE` object at the top of the script in
     `links/index.html`: name, photo, Umami ID, socials, and the `links` array.
     To add a link, copy a block in `links` and edit it; `show: false` hides
-    one. Card text is Nick's own wording (Lightyear's line is the one they've
-    approved), so don't reword it or add labels he hasn't asked for.
+    one. Each card has: image and name, headline, text (with an optional
+    `code` that gets highlighted), button, and `smallPrint` under the button,
+    modelled on makingmoneysimple.co.uk/mms-offers. Card text is Nick's
+    wording, so don't reword it or add labels he hasn't asked for. Offer
+    conditions in the text come from the provider's own page; recheck them
+    there when an offer changes.
   - Images go in `links/img/` (square, 216px or bigger). A card with
     `image: ""` shows the first letter of its title.
   - Social icons available: instagram, tiktok, youtube, linkedin, substack.

@@ -22,6 +22,7 @@
     --bg:#13131d;
     --text:#ffffff;
     --muted:#84848a;
+    --body:#a6a6ad;
     --border:#4d4d54;
     --button:#eceae2;
     --button-text:#111111;
@@ -66,30 +67,36 @@
   .socials .glyph{fill:var(--bg)}
   .socials a:hover .tile{fill:var(--button)}
 
-  .links{display:grid;gap:21px;padding:29px 26px 0}
+  .links{display:grid;gap:18px;padding:29px 20px 0}
   .card{
     display:flex;flex-direction:column;
-    border:1px solid var(--border);border-radius:8px;padding:16px;
+    border:1px solid var(--border);border-radius:14px;padding:22px 20px 18px;
   }
-  .card-top{display:flex;gap:16px;align-items:flex-start;margin-bottom:12px}
-  .thumb{
-    flex:0 0 72px;width:72px;height:72px;border-radius:5px;overflow:hidden;
+  .card-head{display:flex;align-items:center;gap:14px}
+  .logo{
+    flex:0 0 52px;width:52px;height:52px;border-radius:10px;overflow:hidden;
     background:var(--empty);color:var(--muted);
     display:flex;align-items:center;justify-content:center;
-    font-size:26px;font-weight:700;
+    font-size:22px;font-weight:700;
   }
-  .thumb img{width:100%;height:100%;object-fit:cover}
-  .card-text{min-width:0;padding-top:1px}
-  .card-title{font-size:16px;line-height:1.35;font-weight:700;text-wrap:pretty}
-  .card-sub{margin-top:3px;font-size:14px;line-height:1.4;color:var(--muted);text-wrap:pretty}
+  .logo img{width:100%;height:100%;object-fit:cover}
+  .card-name{font-size:18px;line-height:1.3;font-weight:700}
+  .card-headline{margin-top:18px;font-size:21px;line-height:1.25;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+  .card-text{margin-top:8px;font-size:15px;line-height:1.55;color:var(--body);text-wrap:pretty}
+  .card-text mark{
+    background:linear-gradient(transparent 74%,#ffd200 74%,#ffd200 94%,transparent 94%);
+    color:var(--text);font-weight:700;padding:0 1px;
+  }
+  .card-foot{margin-top:auto;padding-top:20px}
   .card-btn{
-    margin-top:auto;height:50px;border-radius:5px;
+    height:50px;border-radius:5px;
     display:flex;align-items:center;justify-content:center;
     background:var(--button);color:var(--button-text);
-    font-size:14px;font-weight:650;
+    font-size:15px;font-weight:650;
     transition:filter .15s ease;
   }
-  .card:hover .card-btn{filter:brightness(.93)}
+  .card-btn:hover{filter:brightness(.93)}
+  .card-small{margin-top:10px;font-size:12.5px;line-height:1.45;color:var(--muted);text-align:center;text-wrap:balance}
 
   /* ---------- Desktop layout: profile left, cards right ---------- */
   @media (min-width:900px){
@@ -107,12 +114,14 @@
     .socials svg{width:21px;height:21px}
     .links{
       max-width:532px;align-content:start;
-      padding:max(64px,22vh) 72px 64px 51px;
+      padding:max(56px,12vh) 72px 64px 51px;
     }
   }
   /* Wide screens: two columns of cards, like Stan */
   @media (min-width:1200px){
-    .links{max-width:none;grid-template-columns:1fr 1fr;column-gap:31px;row-gap:21px}
+    .links{max-width:none;grid-template-columns:1fr 1fr;column-gap:24px;row-gap:24px}
+    /* room for two lines of small print so buttons line up across a row */
+    .card-small{min-height:2.9em}
   }
 </style>
 </head>
@@ -138,8 +147,12 @@
    - To hide a link without deleting it, set show: false.
    - id is the short name that shows up in the click stats, so keep it
      unique, lower case, no spaces (e.g. "investengine").
+   - Each card shows, top to bottom: image and name, headline, text,
+     button, then smallPrint under the button.
+   - code (optional) gets highlighted wherever it appears in the text.
+     Leave it as "" if there's no code.
    - image is a square picture in /links/img/ (at least 216 x 216).
-     Leave it as "" and the card shows the first letter of the title.
+     Leave it as "" and the card shows the first letter of the name.
 
    Socials:
    - icon must be one of: instagram, tiktok, youtube, linkedin, substack
@@ -164,36 +177,48 @@ const PAGE = {
   links: [
     {
       id: "lightyear",
-      title: "Lightyear free share up to £100",
-      subtitle: "Use code NICK. Capital at risk. T&C’s apply.",
-      button: "Open an account",
+      name: "Lightyear",
+      headline: "Free share up to £100",
+      text: "Use the link below, or code NICK in the app, and deposit at least £100 within 15 days to get a free fractional share or ETF in your General Investment Account.",
+      code: "NICK",
+      button: "Sign up to Lightyear",
+      smallPrint: "Capital at risk. T&C’s apply. Sponsored link.",
       url: "https://lightyear.com/nickcrease",
       image: "img/lightyear.png",
       show: true,
     },
     {
       id: "cheatsheet",
-      title: "Free ETF Cheat Sheet",
-      subtitle: "Compare widely used ETFs",
-      button: "Download",
+      name: "ETF Cheat Sheet",
+      headline: "Compare widely used ETFs",
+      text: "A simple one-page guide to ETFs across major regions and sectors, sent straight to your inbox.",
+      code: "",
+      button: "Get the free cheat sheet",
+      smallPrint: "You'll also be subscribed to my weekly investing emails. Unsubscribe anytime.",
       url: "https://zerotoinvestor.co.uk/cheatsheet",
       image: "img/cheatsheet.png",
       show: true,
     },
     {
       id: "monzo",
-      title: "Monzo",
-      subtitle: "Get a welcome bonus up to £100",
-      button: "Open an account",
+      name: "Monzo",
+      headline: "Welcome bonus up to £100",
+      text: "Sign up using the link below and make your first card payment within 30 days to get up to £100.",
+      code: "",
+      button: "Sign up to Monzo",
+      smallPrint: "UK residents only. T&Cs apply. Referral link.",
       url: "https://join.monzo.com/c/14x35m6y",
       image: "img/monzo.png",
       show: true,
     },
     {
       id: "substack",
-      title: "Join my free Substack",
-      subtitle: "Unsubscribe anytime",
-      button: "Join now",
+      name: "Substack",
+      headline: "A free article every week",
+      text: "Investing and personal finance for UK investors from an ex financial analyst.",
+      code: "",
+      button: "Join my free Substack",
+      smallPrint: "Unsubscribe anytime.",
       url: "https://zerotoinvestor.substack.com/subscribe",
       image: "img/substack.png",
       show: true,
@@ -248,29 +273,47 @@ const ICONS = {
   // Link cards
   const list = document.getElementById("links");
   PAGE.links.filter(l => l.show !== false).forEach(l => {
-    const card = make("a", "card");
-    card.href = l.url;
-    card.setAttribute("data-umami-event", l.id);
+    const card = make("article", "card");
 
-    const top = make("div", "card-top");
-    const thumb = make("div", "thumb");
+    const head = make("div", "card-head");
+    const logo = make("div", "logo");
     if (l.image) {
       const img = make("img");
       img.src = l.image;
       img.alt = "";
       img.loading = "lazy";
-      thumb.appendChild(img);
+      logo.appendChild(img);
     } else {
-      thumb.textContent = l.title.trim().charAt(0).toUpperCase();
+      logo.textContent = l.name.trim().charAt(0).toUpperCase();
     }
-    const text = make("div", "card-text");
-    text.appendChild(make("h2", "card-title", l.title));
-    if (l.subtitle) text.appendChild(make("p", "card-sub", l.subtitle));
-    top.appendChild(thumb);
-    top.appendChild(text);
+    head.appendChild(logo);
+    head.appendChild(make("h2", "card-name", l.name));
+    card.appendChild(head);
 
-    card.appendChild(top);
-    card.appendChild(make("span", "card-btn", l.button));
+    if (l.headline) card.appendChild(make("p", "card-headline", l.headline));
+
+    if (l.text) {
+      const p = make("p", "card-text");
+      if (l.code && l.text.includes(l.code)) {
+        const parts = l.text.split(l.code);
+        parts.forEach((part, i) => {
+          p.appendChild(document.createTextNode(part));
+          if (i < parts.length - 1) p.appendChild(make("mark", null, l.code));
+        });
+      } else {
+        p.textContent = l.text;
+      }
+      card.appendChild(p);
+    }
+
+    const foot = make("div", "card-foot");
+    const btn = make("a", "card-btn", l.button);
+    btn.href = l.url;
+    btn.setAttribute("data-umami-event", l.id);
+    foot.appendChild(btn);
+    if (l.smallPrint) foot.appendChild(make("p", "card-small", l.smallPrint));
+    card.appendChild(foot);
+
     list.appendChild(card);
   });
 
