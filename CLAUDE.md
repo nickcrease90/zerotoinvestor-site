@@ -68,9 +68,9 @@ generic AI writing.
 ## Open items
 - The community waitlist page is built on the `waitlist-page` branch and waits
   on its Google Sheet connection before it's merged.
-- The links page is built on the `links-page` branch with photo, card images
-  and Umami ID in place, ready to merge on Nick's go. Swap the Stan URL in his
-  bios and descriptions for zerotoinvestor.co.uk/links before cancelling Stan.
+- The links page went live on 23 Nov 2026. Swap the Stan URL in his bios and
+  descriptions for zerotoinvestor.co.uk/links before cancelling Stan.
+  InvestEngine card to add once Nick has the affiliate link.
 
 ## Working with Nick
 - One scoped change at a time, and show what changed.
